@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn1.sysgears.com/images/favicons/favicon-831be2c494f47e01f44810d87d8d8bb5.ico"
+      type="image/x-icon"
+    />
+    <title>Task 3</title>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="form-wrapper">
+          <div class="title-wrapper">
+            <p class="title">Asteroid Coordinates</p>
+            <img
+              class="title-img"
+              width="32"
+              height="32"
+              src="https://img.icons8.com/ios/50/04b9ff/comet.png"
+              alt="distance--v1"
+            />
+          </div>
+
+          <div class="form-group">
+            <p class="label">Generate Asteroid Location</p>
+            <div class="location-wrapper">
+              <p class="location-text">x: <span id="locationX">0</span></p>
+              <p class="location-text">y: <span id="locationY">0</span></p>
+              <p class="location-text">z: <span id="locationZ">0</span></p>
+            </div>
+            <button class="form-btn" type="submit" id="generateBnt">Generate</button>
+          </div>
+
+          <div class="form-group">
+            <p class="label">Find Asteroid Location</p>
+            <div class="location-wrapper location-result">
+              <p class="location-text">
+                Asteroid location: <span id="asteroidLocation">(x: 0, y: 0, z: 0)</span>
+              </p>
+              <p class="location-text">Count probes: <span id="countProbes">0</span></p>
+            </div>
+            <button class="form-btn" type="submit" id="findBtn">Find</button>
+          </div>
+        </div>
+
+        <div class="content">
+          <p class="content-text">
+            В деякій частині космосу є нерухомо розташований астероїд з унікальним мінералом. Для
+            його точного знаходження був розроблений новий тип простих одноразових зондів, які під
+            час активації один раз визначають точну відстань від себе до астероїда.
+          </p>
+          <p class="content-text">
+            Додаток задає координати активації зондам і, отримуючи відстані від кожного з них до
+            астероїда, знаходить координати астероїда, витративши найменшу кількість зондів.
+          </p>
+          <p class="content-text">
+            1. Для генерації випадкового місцезнаходження астероїда a(x, y, z) напистіть на кнопку
+            "Generate"
+          </p>
+          <p class="content-text">
+            2. Для розрахунку місцезнаходження астероїда "Asteroid location" а(x, y, z), кількості
+            використаних зодів "Count probes", та рендеру списку координат кожного зонда натисніть
+            на кнопку "Find"
+          </p>
+        </div>
+      </div>
+      <div class="result-list"></div>
+    </div>
+    </div>
+    <script src="js/task-03.js"></script>
+    <script src="js/utils/generateAsteroidLocation.js"></script>
+    <script src="js/utils/findAsteroidLocation.js"></script>
+    <script src="js/utils/render-list.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn1.sysgears.com/images/favicons/favicon-831be2c494f47e01f44810d87d8d8bb5.ico"
+      type="image/x-icon"
+    />
+    <title>Task 1</title>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <p class="list__item"><a href="index.html">Go back</a></p>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="form-wrapper">
+          <div class="title-wrapper">
+            <p class="title">Convert Distance</p>
+            <img
+              class="title-img"
+              width="32"
+              height="32"
+              src="https://img.icons8.com/pastel-glyph/64/04b9ff/distance--v1.png"
+              alt="distance--v1"
+            />
+          </div>
+
+          <form class="form" id="conversionForm" action="">
+            <div class="form-group">
+              <label class="label" for="fromUnit">from</label>
+              <select class="input" id="fromUnit" name="fromUnit" required>
+                <option value="m">m</option>
+                <option value="cm">cm</option>
+                <option value="mm">mm</option>
+                <option value="km">km</option>
+                <option value="in">in</option>
+                <option value="ft">ft</option>
+                <option value="yard">yard</option>
+                <option value="mile">mile</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="label" for="value">value</label>
+              <input
+                class="input"
+                type="number"
+                step="0.1"
+                autocomplete="off"
+                name="value"
+                id="value"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="label" for="toUnit">to</label>
+              <select class="input" id="toUnit" name="fromUnit" required>
+                <option value="m">m</option>
+                <option value="cm">cm</option>
+                <option value="mm">mm</option>
+                <option value="km">km</option>
+                <option value="in">in</option>
+                <option value="ft">ft</option>
+                <option value="yard">yard</option>
+                <option value="mile">mile</option>
+              </select>
+            </div>
+
+            <button class="form-btn" type="submit">Convert</button>
+          </form>
+
+          <div class="result">
+            <p class="result-text">
+              <span id="formResultConversion"></span>
+              <span class="equal">=</span>
+              <span id="toResultConversion"></span>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <p class="content-text">
+            Додаток для конвертації між одиницями відстані з підтримкою метричної та імперської
+            систем вимірювання.
+          </p>
+          <p class="content-text">
+            Додаток розпізнає метри (m), сантиметри (cm), міліметри (mm), кілометри (km), дюйми (in)
+            та фути (ft), ярди (yard), милі (mile) і підтримувати конвертацію між будь-якими з цих
+            одиниць виміру.
+          </p>
+          <p class="content-text">
+            1. Оберіть одиницю відстані яку бажаєте конвертувати в меню "FROM"
+          </p>
+          <p class="content-text">2. Введіть значення відстані в полі "VALUE"</p>
+          <p class="content-text">
+            3. Оберіть одиницю відстані в яку бажаєте конвертувати в меню "TO"
+          </p>
+          <p class="content-text">3. Натисніть на кнопку "Convert" для конвертації</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/task-01.js"></script>
+    <script src="js/utils/convertDistance.js"></script>
+  </body>
+</html>

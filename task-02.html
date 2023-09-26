@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn1.sysgears.com/images/favicons/favicon-831be2c494f47e01f44810d87d8d8bb5.ico"
+      type="image/x-icon"
+    />
+    <title>Task 2</title>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <p class="list__item"><a href="index.html">Go back</a></p>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="form-wrapper">
+          <div class="title-wrapper">
+            <p class="title">List Filter</p>
+            <img
+              class="title-img"
+              width="32"
+              height="32"
+              src="https://img.icons8.com/ios/50/04b9ff/filter-and-sort.png"
+              alt="distance--v1"
+            />
+          </div>
+
+          <form class="form" id="addListForm" action="">
+            <div class="form-group">
+              <label class="label" for="data">data json</label>
+              <textarea
+                class="input textarea"
+                id="data"
+                name="data"
+                rows="5"
+                placeholder="Enter your data here..."
+              ></textarea>
+            </div>
+
+            <button class="form-btn" type="submit">Show</button>
+          </form>
+
+          <form class="form" id="filterListForm" action="">
+            <div class="form-group">
+                <label class="label" for="condition">condition</label>
+                <select class="input" id="condition" name="condition" required>
+                  <option value="include">include</option>    
+                  <option value="exclude">exclude</option>
+                </select>
+            </div>
+
+            <div class="filter-wrapper">
+              <div class="form-group filter-select">
+                  <label class="label" for="filter">filter</label>
+                  <select class="input" id="filter" name="filter" required>
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label class="label" for="filterValue">value</label>
+                  <input class="input filter-value" type="text" name="filterValue" autocomplete=off id="filterValue" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="sortBy">sort by</label>
+                <select class="input" id="sortBy" name="sortBy">
+                  <option value=""></option>
+                </select>
+            </div>
+
+            <button class="form-btn" type="submit">Filter</button>
+          </form>
+        </div>
+        
+        <div class="content">
+          <p class="content-text">
+            Додаток для сортування та відбору даних за визначеними правилами. Додаток вмітє
+            працювати зі списками JSON об'єктів довільної структури, відбирати об'єкти, що містять
+            ключі з відповідними значеннями, а також сортувати об'єкти за значенням, використовуючи
+            природний порядок сортування.
+          </p>
+          <p class="content-text">
+            1. Введіть список JSON об'єктів до поля "DATA JSON" у форматі:
+            <pre class="json">[
+  {"name": "John", "email": "john2@mail.com"},
+  {"name": "John", "email": "john1@mail.com"},
+  {"name": "Jane", "email": "jane@mail.com"}
+]</pre>
+          <p class="content-text">та натисніть на кнопку "Show"</p>  
+          </p>
+          <p class="content-text">
+            2. Оберіть: <br>
+            - умову за якою хочете відфільтрувати ("inclube", "exclude") в полі "CONDITION";<br>
+            - властивість в полі "FILTER";<br>
+            - введіть значення властивість в полі "VALUE";
+          </p>
+          <p class="content-text">
+            3. Оберіть умову за якою бажаєте відсортувати список в полі "SORT BY" (необов'язково*)
+          </p>
+          <p class="content-text">4. Натисніть на кнопку "Filter" для фільтрації</p>
+        </div>
+      </div>
+      <div class="result-list"></div>
+    </div>
+    <script src="js/task-02.js"></script>
+    <script src="js/utils/render-list.js"></script>
+    <script src="js/utils/filter.js"></script>
+    <script src="js/utils/addFilterOptions.js"></script>
+  </body>
+</html>

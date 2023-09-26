@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn1.sysgears.com/images/favicons/favicon-831be2c494f47e01f44810d87d8d8bb5.ico"
+      type="image/x-icon"
+    />
+    <title>Task 4</title>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <p class="list__item"><a href="index.html">Go back</a></p>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="form-wrapper">
+          <div class="title-wrapper">
+            <p class="title">Survey</p>
+            <img
+              class="title-img"
+              width="32"
+              height="32"
+              src="https://img.icons8.com/ios/50/04b9ff/survey.png"
+              alt="distance--v1"
+            />
+          </div>
+
+          <form class="form" id="configurationForm" action="">
+            <div class="form-group">
+              <label class="label" for="configurationData">json configuration</label>
+              <textarea
+                class="input textarea"
+                id="configurationData"
+                name="configurationData"
+                rows="5"
+                placeholder="Enter your data here..."
+              ></textarea>
+            </div>
+
+            <button class="form-btn" type="submit">Show</button>
+          </form>
+
+          <div class="form-group">
+            <p class="label">Show paths number</p>
+            <div class="location-wrapper location-result">
+              <p class="location-text">Paths number: <span id="pathsNumber">0</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <p class="content-text">
+            Додаток-опитувальник, в якому порядок та список запитань залежить від переданої
+            конфігурації у форматі JSON. Опитувальник підтримує лише запитання з варіантами
+            відповідей.
+          </p>
+          <p class="content-text">
+            Запитання в опитувальнику визначаються динамічно на основі відповідей користувача -
+            наступне запитання залежить від відповіді на попереднє.
+          </p>
+          <p class="content-text">
+            Введіть список JSON конфігурацю об'єкта запитань з варіантами відповідей, до поля "JSON
+            CONFIGURATION" у форматі:
+          </p>
+
+          <pre class="json">
+  "What is your marital status?":
+  ["Single", "Married"],
+  "Are you planning on getting married next year?":
+  ["Yes", "No"],
+  "How long have you been married?":
+  ["Less than a year", "More than a year"],
+  "Have you celebrated your one year anniversary?":
+  ["Yes", "No"]</pre
+          >
+          <p class="content-text">та натисніть на кнопку "Show"</p>
+        </div>
+      </div>
+      <div class="result-list"></div>
+    </div>
+    <script src="js/task-04.js"></script>
+    <script src="js/utils/survey.js"></script>
+    <script src="js/utils/render-list.js"></script>
+  </body>
+</html>
