@@ -1,6 +1,6 @@
 // Функція для застосування правила "exclude"
 const applyExcludeRule = (data, conditions) => {
-  return data.filter(item => {
+  return data.filter((item) => {
     for (const condition of conditions) {
       for (const key in condition) {
         if (item[key] === condition[key]) {
@@ -14,7 +14,7 @@ const applyExcludeRule = (data, conditions) => {
 
 // Функція для застосування правила "include"
 const applyIncludeRule = (data, conditions) => {
-  return data.filter(item => {
+  return data.filter((item) => {
     for (const condition of conditions) {
       let matchesAll = true;
       for (const key in condition) {
@@ -35,15 +35,20 @@ const applyIncludeRule = (data, conditions) => {
 const sortByKeys = (data, keys) => {
   return data.sort((a, b) => {
     for (const key of keys) {
-      if (a[key] < b[key]) return -1;
-      if (a[key] > b[key]) return 1;
+      const valueA = String(a[key]).toLowerCase(); // Переведемо в нижній регістр для порівняння
+      const valueB = String(b[key]).toLowerCase(); // Переведемо в нижній регістр для порівняння
+
+      const comparison = valueA.localeCompare(valueB);
+      if (comparison !== 0) {
+        return comparison;
+      }
     }
     return 0;
   });
 };
 
 // Основна функція для обробки вхідних даних
-const processData = inputData => {
+const processData = (inputData) => {
   try {
     const input = JSON.parse(inputData);
     const data = input.data;
