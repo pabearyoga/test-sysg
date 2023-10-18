@@ -7,8 +7,6 @@ const addDistanceUnit = (unitName, unitValue) => {
     const optionValues = optionsList.map((option) => option.value);
     const contains = optionValues.includes(`${unitName}`);
 
-    console.log(contains);
-
     const optionFromOption = document.createElement("option");
     optionFromOption.value = `${unitName}`;
     optionFromOption.textContent = `${unitValue}`;
