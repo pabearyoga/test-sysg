@@ -30,6 +30,44 @@
             />
           </div>
 
+          <!-- Add custom distance units form -->
+          <form class="form" id="addUnitsForm" action="">
+            <div
+              class="form-group-add"
+              role="group"
+              aria-labelledby="contact-details-head"
+            >
+              <p class="label label-top" id="contact-details-head">
+                Add your custom distance units:
+              </p>
+              <label class="label">
+                Units name
+                <input
+                  class="input"
+                  type="text"
+                  autocomplete="off"
+                  name="units-name"
+                  id="unitsName"
+                  required
+                />
+              </label>
+              <label class="label">
+                Units value
+                <input
+                  class="input"
+                  type="number"
+                  autocomplete="off"
+                  name="units-value"
+                  id="unitsValue"
+                  required
+                />
+              </label>
+
+              <button class="form-btn" type="submit">Add</button>
+            </div>
+          </form>
+
+          <!-- Convert distance form -->
           <form class="form" id="conversionForm" action="">
             <div class="form-group">
               <label class="label" for="fromUnit">from</label>
@@ -109,6 +147,7 @@
       </div>
     </div>
     <script src="js/task-01.js"></script>
+    <script src="js/utils/addDistanceUnits.js"></script>
     <script src="js/utils/convertDistance.js"></script>
   </body>
 </html>

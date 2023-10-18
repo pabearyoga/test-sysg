@@ -11,7 +11,7 @@ const units = {
 };
 
 // Функція для конвертації одиниць вимірювання
-const convertDistance = inputData => {
+const convertDistance = (inputData) => {
   try {
     const data = JSON.parse(inputData);
     const fromUnit = data.distance.unit;
