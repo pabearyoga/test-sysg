@@ -9,11 +9,17 @@ const addDistanceUnit = (unitName, unitValue) => {
 
     const optionFromOption = document.createElement("option");
     optionFromOption.value = `${unitName}`;
-    optionFromOption.textContent = `${unitValue}`;
+    optionFromOption.textContent = `${unitName}`;
 
     const optionToOption = document.createElement("option");
     optionToOption.value = `${unitName}`;
-    optionToOption.textContent = `${unitValue}`;
+    optionToOption.textContent = `${unitName}`;
+
+    console.log(unitValue);
+    console.log(typeof Number(unitValue));
+
+    units[`${unitName}`] = Number(unitValue);
+    console.log(units);
 
     if (!contains) {
       fromOption.appendChild(optionFromOption);

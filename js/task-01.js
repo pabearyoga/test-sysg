@@ -43,10 +43,11 @@ const addUnitsFormSubmit = (event) => {
     const unitName = document.getElementById("unitsName").value;
     const unitValue = document.getElementById("unitsValue").value;
 
+    // Додаємо значення до списків опцій
     addDistanceUnit(unitName, unitValue);
 
-    // const value = parseFloat(document.getElementById("value").value);
-    // const toUnit = document.getElementById("toUnit").value;
+    // Очищаємо форму
+    addUnitsForm.reset();
   } catch {
     return error.message;
   }
