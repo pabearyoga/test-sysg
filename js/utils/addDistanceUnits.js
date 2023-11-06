@@ -15,10 +15,9 @@ const addDistanceUnit = (unitName, unitValue) => {
     optionToOption.value = `${unitName}`;
     optionToOption.textContent = `${unitName}`;
 
-    console.log(unitValue);
-    console.log(typeof Number(unitValue));
-
     units[`${unitName}`] = Number(unitValue);
+    units[`${unitName}`] = Number(unitValue);
+
     console.log(units);
 
     if (!contains) {
