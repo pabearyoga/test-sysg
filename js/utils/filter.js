@@ -82,7 +82,7 @@ const processData = (inputData) => {
 //     {"user": "john@mail.com", "rating": 25, "disabled": true, "aaa": false}
 //   ],
 //   "condition": {
-//     "include": [{"aaa": true}],
+//     "include": [{"user": "john@mail.com", "aaa": false}],
 //     "sortBy": ["rating"]
 //   }
 // }`;

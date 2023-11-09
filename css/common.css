@@ -103,6 +103,8 @@ a {
   font-size: 10px;
   color: #5e7090;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 
 .label-top {

@@ -1,12 +1,13 @@
-const addListForm = document.getElementById('addListForm');
-const dataTextarea = document.getElementById('data');
-const filterListForm = document.getElementById('filterListForm');
-const condition = document.getElementById('condition');
-const filter = document.getElementById('filter');
-const filterValue = document.getElementById('filterValue');
-const sortBy = document.getElementById('sortBy');
+const addListForm = document.getElementById("addListForm");
+const dataTextarea = document.getElementById("data");
+const filterListForm = document.getElementById("filterListForm");
+const condition = document.getElementById("condition");
+const filter = document.getElementById("filter");
+const filterValue = document.getElementById("filterValue");
+const sortBy = document.getElementById("sortBy");
+const check = document.getElementById("check");
 
-const addListFormSubmit = event => {
+const addListFormSubmit = (event) => {
   event.preventDefault();
   const inputData = dataTextarea.value.trim(); // Отримати дані з textarea
 
@@ -14,7 +15,7 @@ const addListFormSubmit = event => {
   renderDataList(inputData); // Рендеримо список
 };
 
-const filterListFormSubmit = event => {
+const filterListFormSubmit = (event) => {
   event.preventDefault();
 
   const inputJson = `{
@@ -28,5 +29,13 @@ const filterListFormSubmit = event => {
   renderDataList(result); // Рендеримо список
 };
 
-addListForm.addEventListener('submit', addListFormSubmit);
-filterListForm.addEventListener('submit', filterListFormSubmit);
+addListForm.addEventListener("submit", addListFormSubmit);
+filterListForm.addEventListener("submit", filterListFormSubmit);
+
+//check start
+const handleClick = (event) => {
+  console.log(event.target.name);
+};
+
+//check
+check.addEventListener("click", handleClick);
